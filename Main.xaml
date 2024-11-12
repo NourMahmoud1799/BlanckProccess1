@@ -120,7 +120,7 @@
       <AssemblyReference>System.Windows.Presentation</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1556,1831" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1556,2004" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="intNum1" />
     </Sequence.Variables>
@@ -129,13 +129,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence Selectors " sap:VirtualizedContainerService.HintSize="536,744" sap2010:WorkflowViewState.IdRef="Sequence_23">
+    <Sequence DisplayName="Sequence Selectors " sap:VirtualizedContainerService.HintSize="536,917" sap2010:WorkflowViewState.IdRef="Sequence_23">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="strClickAction">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">Work Items</Literal>
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:String" Default="Work Items" Name="strClickAction" />
         <Variable x:TypeArguments="x:Int32" Name="intcount" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
@@ -143,6 +139,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="502,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Sequence Selector Is Started&quot;]" />
       <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_10">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[intcount]</OutArgument>
@@ -151,7 +148,7 @@
           <InArgument x:TypeArguments="x:Int32">1</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="502,433" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[intcount&lt;10]" DisplayName="While" sap:VirtualizedContainerService.HintSize="502,433" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
         <ui:InterruptibleWhile.Body>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,287" sap2010:WorkflowViewState.IdRef="Sequence_25">
             <sap:WorkflowViewStateService.ViewState>
@@ -170,9 +167,6 @@
             </Assign>
           </Sequence>
         </ui:InterruptibleWhile.Body>
-        <ui:InterruptibleWhile.Condition>
-          <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="intcount&lt;10" />
-        </ui:InterruptibleWhile.Condition>
       </ui:InterruptibleWhile>
       <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="502,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e3273f2f-5316-47ab-9260-38f762a165de" Version="V2">
         <uix:NApplicationCard.Body>
@@ -311,7 +305,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BuildDataTable DataTable="[dtStudents]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Age&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Name&gt;Nour&lt;/Name&gt;&#xD;&#xA;    &lt;Age&gt;34&lt;/Age&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Name&gt;Sam&lt;/Name&gt;&#xD;&#xA;    &lt;Age&gt;30&lt;/Age&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Name&gt;Ahmed&lt;/Name&gt;&#xD;&#xA;    &lt;Age&gt;40&lt;/Age&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+            <ui:BuildDataTable DataTable="[dtStudents]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Age&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Name&gt;Nour&lt;/Name&gt;&#xA;    &lt;Age&gt;34&lt;/Age&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Name&gt;Sam&lt;/Name&gt;&#xA;    &lt;Age&gt;30&lt;/Age&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Name&gt;Ahmed&lt;/Name&gt;&#xA;    &lt;Age&gt;40&lt;/Age&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
             <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Nancy&quot;,&quot;25&quot;}]" DataTable="[dtStudents]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
             <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Grade" DataTable="[dtStudents]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
             <ui:FilterDataTable DataTable="[dtStudents]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtStudents]" SelectColumnsMode="Remove">
@@ -602,7 +596,7 @@
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable CVScreenId="f89bf2ae-3aea-49c2-9e8a-5f08964b7c70" ContentHash="k9kxWJUzm0maQxAVfmUOJw" CvElementArea="332, 207, 123, 25" CvType="InputBox" DesignTimeRectangle="333, 208, 120, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='onustb' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='onustb' role='editable text' /&gt;" Guid="7e881c02-9df7-4294-b8ce-6048ccfdff2d" InformativeScreenshot="348335b8e87614030ff28e349b5e255a.png" IsResponsive="True" Reference="2vc4nnym2kWk-b8p7pLpdg/geXXLOFIjEKbtLSS0hZE_Q" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="f89bf2ae-3aea-49c2-9e8a-5f08964b7c70" CvTextArea="228, 211, 85, 13" CvTextArgument="On Us Check" CvType="Text" DesignTimeRectangle="229, 210, 83, 16" ElementType="Text" FullSelectorArgument="&lt;ctrl name='On Us Check' role='text' /&gt;&lt;ctrl name='On Us Check' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='On Us Check' role='text' /&gt;&lt;ctrl name='On Us Check' role='text' automationid='' check:text='On Us Check' /&gt;" Guid="4d8a0e9b-d57d-409c-97e2-c97d58235ad5" SearchSteps="Selector, FuzzySelector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -623,7 +617,7 @@
                       <uix:NClick.Target>
                         <uix:TargetAnchorable CVScreenId="367dd91d-1ad6-4772-b3be-d35b96a24269" ContentHash="v4Dxb3rFzEqlXLWMdFa49g" CvElementArea="440, 545, 82, 33" CvTextArea="461, 555, 39, 14" CvTextArgument="Accept" CvType="Button" DesignTimeRectangle="441, 546, 80, 31" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Accept' role='push button' automationid='' check:text='Accept' /&gt;" Guid="2bd6b878-ea60-4708-a0db-30caaf4f3353" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAjCAYAAAAKTC24AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGSSURBVGhD7ZbbrYMwDECJEAshtkFUjMAIXIk9+GAMxCTACqzgSx4m4VVV1FAp8sdRGzsJysFxG0zTBAwdLJSYRWhRFMwXHAodx5G5AAslhoUSw0KJYaHEsFBiWCgxLJQYFkoMCyXmJ0KHvoZUhJBU3WH+TtSzwwSqbjjMf8vjQodhgLaMIc4yiJMKunl8NO8uPBTaQhnLA8nPCPJmfbC+TiEIAkWUN2/j+HL2cb3366+EWAgQ5jbouFBzxU1Snxfazoc0lSkludJULsqhmXMoRQo/i8v1AuNOG0FxS06uNwK9qlCsKOyd6nCLKJ1zBbtr9vEe6lTsqlWOtVDbo/VcI9svofbKIUKYKtwIsmvex929JKGqflvFdq6HQt0r6sa0hCsVaqtwndtWqB17I/S00pz+tuqJjoTP43p//I4vysseqg5irvcqvhKhqxGvL8r/NL4IVHtGkGX6nwG2Ffd53vzKPwEK3b68J2ChxHgp9JewUGJYKDEslBgWSgwLJYaFEsNCiTkVylxnJ5ShgYWSMsE/89Rq+g3CD+gAAAAASUVORK5CYII=" InformativeScreenshot="5384ed8d1cfe2cba1fd27fef36cb98bf.png" Reference="2vc4nnym2kWk-b8p7pLpdg/OBYxa0WroE6ZZhZdw7mSDw" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="367dd91d-1ad6-4772-b3be-d35b96a24269" CvElementArea="440, 545, 82, 33" CvTextArea="461, 555, 39, 14" CvTextArgument="Accept" CvType="Button" DesignTimeRectangle="463, 555, 36, 13" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;&lt;ctrl name='Accept' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;&lt;ctrl name='Accept' role='text' automationid='' check:text='Accept' /&gt;" Guid="afd97f34-344a-4f15-a513-9a8c823b924b" SearchSteps="Selector, FuzzySelector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -644,7 +638,7 @@
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable CVScreenId="ab34cb35-b530-43ce-87fa-850534da3296" ContentHash="NXJpn2u4N0aYNm366YyC6w" CvTextArea="520, 127, 48, 13" CvType="AnyWordGroup" DesignTimeRectangle="521, 126, 47, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='transnrlabel' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='transnrlabel' role='text' /&gt;" Guid="8490a23c-8712-4b91-a17d-358ef9ff7873" InformativeScreenshot="b2e3566b8e8d02ff31b7ef6b2413dbbb.png" Reference="2vc4nnym2kWk-b8p7pLpdg/9S4v26M9HkmzpzzDT9Oh_Q" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="ab34cb35-b530-43ce-87fa-850534da3296" CvTextArea="426, 127, 91, 14" CvTextArgument="Transaction #:" CvType="Text" DesignTimeRectangle="428, 126, 88, 16" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Transaction #:' role='text' /&gt;&lt;ctrl name='Transaction #:' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Transaction #:' role='text' /&gt;&lt;ctrl name='Transaction #:' role='text' automationid='' check:text='Transaction #:' /&gt;" Guid="8831a17a-665b-4991-8016-782d7be56afb" SearchSteps="Selector, FuzzySelector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
