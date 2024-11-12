@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="v4Dxb3rFzEqlXLWMdFa49g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="367dd91d-1ad6-4772-b3be-d35b96a24269" CvElementArea="440, 545, 82, 33" CvTextArea="461, 555, 39, 14" CvTextArgument="Accept" CvType="Button" DesignTimeRectangle="441, 546, 80, 31" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Accept' role='push button' automationid='' check:text='Accept' /&gt;" Guid="2bd6b878-ea60-4708-a0db-30caaf4f3353" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAjCAYAAAAKTC24AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGSSURBVGhD7ZbbrYMwDECJEAshtkFUjMAIXIk9+GAMxCTACqzgSx4m4VVV1FAp8sdRGzsJysFxG0zTBAwdLJSYRWhRFMwXHAodx5G5AAslhoUSw0KJYaHEsFBiWCgxLJQYFkoMCyXmJ0KHvoZUhJBU3WH+TtSzwwSqbjjMf8vjQodhgLaMIc4yiJMKunl8NO8uPBTaQhnLA8nPCPJmfbC+TiEIAkWUN2/j+HL2cb3366+EWAgQ5jbouFBzxU1Snxfazoc0lSkludJULsqhmXMoRQo/i8v1AuNOG0FxS06uNwK9qlCsKOyd6nCLKJ1zBbtr9vEe6lTsqlWOtVDbo/VcI9svofbKIUKYKtwIsmvex929JKGqflvFdq6HQt0r6sa0hCsVaqtwndtWqB17I/S00pz+tuqJjoTP43p//I4vysseqg5irvcqvhKhqxGvL8r/NL4IVHtGkGX6nwG2Ffd53vzKPwEK3b68J2ChxHgp9JewUGJYKDEslBgWSgwLJYaFEsNCiTkVylxnJ5ShgYWSMsE/89Rq+g3CD+gAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="367dd91d-1ad6-4772-b3be-d35b96a24269" CvElementArea="440, 545, 82, 33" CvTextArea="461, 555, 39, 14" CvTextArgument="Accept" CvType="Button" DesignTimeRectangle="463, 555, 36, 13" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;&lt;ctrl name='Accept' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;&lt;ctrl name='Accept' role='text' automationid='' check:text='Accept' /&gt;" Guid="afd97f34-344a-4f15-a513-9a8c823b924b" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5384ed8d1cfe2cba1fd27fef36cb98bf.png" xmlns="">06FBpWurzpUKgJ_JPB1U1Uw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

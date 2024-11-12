@@ -1,0 +1,12 @@
+﻿{
+  "Name": "DoubleUI",
+  "Type": "App",
+  "Id": "2I7QHVkvQEqf7iceX_sPUg",
+  "Reference": "2vc4nnym2kWk-b8p7pLpdg/2I7QHVkvQEqf7iceX_sPUg",
+  "Created": "2024-11-11T11:22:39.5706243Z",
+  "Updated": "2024-11-11T11:22:39.5706243Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

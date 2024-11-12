@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QrMPbCkEtU-epm_jZq6PKg" Reference="2vc4nnym2kWk-b8p7pLpdg/qDa4dbQY1k6gNHm1FBx7Uw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/home" CVScreenId="d49da64d-0fd0-4a18-ae6d-d2aaf56b2255" CvElementArea="458, 393, 204, 50" CvTextArea="520, 409, 102, 20" CvTextArgument="User options" CvType="Button" DesignTimeRectangle="461, 395, 200, 46" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl parentid='dashmenu' tag='BUTTON' type='button' class='btn btn-default btn-lg dropdown-toggle' aaname='*{0}' check:innerText='{0}' /&gt;&quot;, strClickAction)]" Guid="167ac027-47ad-4ba5-80c7-2c5051acaaec" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="dcee2cd08c3dc1bef6dffc7574b2b913.png" xmlns="">0xPw4-m_b1ECSrDLEMBIzaQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="User options" Name="strClickAction" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
